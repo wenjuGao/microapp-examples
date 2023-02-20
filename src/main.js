@@ -1,21 +1,53 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { registerApplication, start } from 'single-spa'
+import router from './router/index'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
+import {
+	registerApplication,
+	start
+} from 'single-spa'
+
+// console.log(process);
+
 
 registerApplication(
-	'navbar',
-	() => import('../microapps/navbar/app'),
-	location => location.pathname.startsWith('/')
+	'react-app',
+	// eslint-disable-next-line no-undef
+	() => import(/* webpackIgnore: true */'http://localhost:8080/react-app.js'),
+	// () => import('microapps/react-app/src/singleSpaApp'),
+	location => location.hash.startsWith('#/react-app'),
+	{
+		domElement: document.getElementById('react-app'),
+		// 	domElementGetter: function () {
+		// 		return document.getElementById('react-app')
+		// 	}
+	}
 )
 
-start()
+// registerApplication(
+// 	'vue-app',
+// 	() => import('microapps/vue-app/app'),
+// 	location => location.pathname.startsWith('/vue-app')
+// )
 
-// import { declareChildApplication, start } from 'single-spa';
+// registerApplication(
+// 	'vue-app',
+// 	() => import('microapps/vue-app/app'),
+// 	location => location.pathname.startsWith('/vue-app')
+// )
 
-// declareChildApplication('navbar', () => import('../microapps/navbar/app'), () => true);
-// start();
+// registerApplication(
+// 	'vue-app',
+// 	() => import('microapps/vue-app/app'),
+// 	location => location.pathname.startsWith('/vue-app')
+// )
+
+start({ urlRerouteOnly: true, })
 
 
-createApp(App).mount('#app')
+createApp(App).use(router).use(ElementPlus).mount('#app')
+
 
 
