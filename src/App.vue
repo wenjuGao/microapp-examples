@@ -20,9 +20,7 @@
 	<el-card class="box-card">
 		<template #header>
 			<div class="card-header">
-				<span>load child app</span>
-				<el-button class="button"
-					text>Refresh</el-button>
+				load child app
 			</div>
 		</template>
 		<div class="card-body-box">
@@ -57,9 +55,15 @@
 			image: vueLogo
 		},
 		{
-			label: "load vue App",
-			value: "vue",
-			path: "/vue-app",
+			label: "load vue3 App",
+			value: "vue3",
+			path: "/vue3-app",
+			image: vueLogo
+		},
+		{
+			label: "load vue2 App",
+			value: "vue2",
+			path: "/vue2-app",
 			image: vueLogo
 		},
 		{
@@ -107,7 +111,6 @@
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: #2c3e50;
-		margin-top: 60px;
 	}
 	.page-title {
 		font-size: 16px;

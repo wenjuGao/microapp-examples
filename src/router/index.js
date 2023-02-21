@@ -11,11 +11,18 @@ const routes = [
 		component: () => import('@/views/home/main-desk.vue')
 	},
 	{
-		path: '/vue-app',
-		title: 'load vue App',
-		name: 'load vue App',
+		path: '/vue3-app',
+		title: 'load vue3 App',
+		name: 'load vue3 App',
 		meta: {},
-		component: () => import('@/views/load-vue-app.vue')
+		component: () => import('@/views/load-vue3-app.vue')
+	},
+	{
+		path: '/vue2-app',
+		title: 'load vue2 App',
+		name: 'load vue2 App',
+		meta: {},
+		component: () => import('@/views/load-vue2-app.vue')
 	},
 	{
 		path: '/react-app',

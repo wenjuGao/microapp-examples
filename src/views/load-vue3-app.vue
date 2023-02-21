@@ -13,7 +13,7 @@
 	import Parcel from 'single-spa-vue/parcel'
 	import { mountRootParcel } from 'single-spa'
 	import { computed } from 'vue'
-	const parcelConfig = computed(() => import('microapps/vue-app/src/singleSpaApp'))
+	const parcelConfig = computed(() => import('microapps/vue3-app/src/singleSpaApp'))
 	const getParcelProps = () => {
 		// props some context to child app
 		return {

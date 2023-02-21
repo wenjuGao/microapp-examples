@@ -20,15 +20,21 @@
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title
           %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
-  <!-- <script type="systemjs-importmap">
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+  <script type="systemjs-importmap">
           {
             "imports": {
-              "@single-spa/react-app": "http://localhost:8080/react-app.js",
+                 "@single-spa/react-app": "http://localhost:8080/react-app-react-app.js",
+                  "@single-spa/vue3-app": "http://localhost:8001/js/app.js",
+                  "@single-spa/vue2-app": "http://localhost:8002/js/app.js",
+                  "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+                  "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js"
             }
           }
-        </script> -->
+  </script>
   <div id="app"></div>
-  <div id="react-app"></div>
+  <!-- <div id="react-app"></div> -->
   <!-- built files will be auto injected -->
 </body>
 
