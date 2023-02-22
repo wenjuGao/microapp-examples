@@ -7,9 +7,11 @@
 		wrapWith="div"
 		wrapClass="vue-child-app-load"
 		:parcelProps="getParcelProps()" />
+	<App />
 </template>
 
 <script setup>
+	import App from "microapps/vue3-app/src/App"
 	import Parcel from 'single-spa-vue/parcel'
 	import { mountRootParcel } from 'single-spa'
 	import { computed } from 'vue'

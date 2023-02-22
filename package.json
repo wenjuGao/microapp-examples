@@ -21,6 +21,7 @@
 		"single-spa-react": "^5.0.0",
 		"single-spa-svelte": "^2.1.1",
 		"single-spa-vue": "^2.5.1",
+		"systemjs": "^6.13.0",
 		"svelte": "^3.55.1",
 		"systemjs-webpack-interop": "^2.3.7",
 		"vue": "^3.2.47",
